@@ -1,18 +1,10 @@
-# Ezhil
+# Sourcery
 
-Clean and minimal personal blog and portfolio theme for Hugo.
-
-## Demo
-
-[View demo](https://ezhil-hugo.netlify.com/)
-
-![Screenshot](images/screenshot-light.png "Ezhil light theme")
-![Screenshot](images/screenshot-dark.png "Ezhil dark theme")
+Clean and minimal personal blog and portfolio theme for Hugo - Modified from [Ezhil](https://ezhil-hugo.netlify.com/)
 
 ## Features
 
 * Clean and minimal
-* Dark mode (Auto detect from OS)
 * Responsive
 * Supports tags
 * Social media links
@@ -29,7 +21,7 @@ From your Hugo site run the following.
 
 ```sh
 cd themes
-git clone https://github.com/vividvilla/ezhil.git
+git clone git@github.com:FooBartn/HugoSourcery.git
 ```
 
 For more information read the [official setup guide](https://gohugo.io/overview/installing/) of Hugo.
@@ -40,7 +32,7 @@ For more information read the [official setup guide](https://gohugo.io/overview/
 baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "My personal blog"
-theme = "ezhil"
+theme = "HugoSourcery"
 
 copyright = "© Copyright notice"
 
@@ -59,7 +51,7 @@ paginate = 10
 
 [params]
     # Blog subtitle which appears below blog title. Supports markdown.
-    subtitle = "Clean and minimal personal [blog theme for Hugo](https://github.com/vividvilla/ezhil)"
+    subtitle = "Clean and minimal personal [blog theme for Hugo](https://github.com/FooBartn/HugoSourcery)"
 
     # Content types which are included in home page recent posts list.
     mainSections = ["posts"]
@@ -72,10 +64,6 @@ paginate = 10
 
     # Specify favicon (icons/i.png maps to static/icons/i.png). No favicon if not defined.
     favicon = "icons/myicon.png"
-
-    # Switch to dark mode or auto detect mode from OS (Optional).
-    # "dark" will set mode to dark and "auto" will switch to dark mode if OS is in dark mode.
-    mode = "dark" # "dark" or "auto"
 
     # Custom CSS added to default styles. Files added to `static` folder is copied as it is to
     # root by Hugo. For example if you have custom CSS file under `static/css/custom.css` then
@@ -115,7 +103,7 @@ weight = 4
 [[params.social]]
 name = "Github"
 icon = "github"
-url = "https://github.com/vividvilla/ezhil"
+url = "https://github.com/FooBartn/HugoSourcery"
 
 [[params.social]]
 name = "Twitter"

@@ -1,5 +1,17 @@
 <div class="header">
-	<h1 class="site-title"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
+	<div class="top">
+		<h1 class="site-title">
+			<a href="{{ .Site.BaseURL }}">{{ .Site.Title }}<span class="site-title-suffix">BLOG</span></a>
+		</h1>
+		<ul class="flat">
+			{{ range .Site.Menus.main }}
+			<li>
+				<a href="{{ .URL }}">{{ .Name }}</a>
+			</li>
+			{{ end }}
+		</ul>
+	</div>
+	{{ if ne .Type "posts" }}
 	<div class="site-description">
 		{{- if isset .Site.Params "subtitle" -}}
 		<h2>{{ .Site.Params.Subtitle | markdownify }}</h2>
@@ -12,14 +24,5 @@
 			</ul>
 		</nav>
 	</div>
-
-	<nav class="nav">
-		<ul class="flat">
-			{{ range .Site.Menus.main }}
-			<li>
-				<a href="{{ .URL }}">{{ .Name }}</a>
-			</li>
-			{{ end }}
-		</ul>
-	</nav>
+	{{ end }}
 </div>
